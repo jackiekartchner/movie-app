@@ -1,0 +1,2 @@
+class AddEnglishToMovie < ApplicationRecord
+end
