@@ -5,3 +5,7 @@ class Actor < ApplicationRecord
   validates :known_for, presence: true
   validates :age, inclusion: { in: %w(age > 13), message: "%{value} is not a valid age" }
 end
+
+def age_order
+  Actor.all.order(:age)
+end
