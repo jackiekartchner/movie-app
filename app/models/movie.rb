@@ -5,6 +5,7 @@ class Movie < ApplicationRecord
   # validates :director, presence: true
 
   has_many :actors
+  belongs_to :user 
   
   def english
     Movie.where(english: "%true%")
