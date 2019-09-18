@@ -1,0 +1,29 @@
+<h2><%= @movie.title %></h2>
+
+  <h3> Year: <%= @movie.year %></h3>
+  <p> <b>Plot:</b> <%= @movie.plot %></p>
+  <p> <b>Director:</b> <%= @movie.director %></p>
+  <p> <b>English:</b> <%= @movie.english %></p>
+  
+  <a href="/movies">All Movies</a>
+  
+  <form action="/movies/:id" method="get">
+    <div>
+      <b>Year:</b> <input type="integer" name="year">
+    </div>
+    <div>
+      <b>Plot:</b> <input type="stringr" name="plot">
+    </div>
+    <div>
+      <b>Director:</b> <input type="string" name="director">
+    </div>
+    <div>
+      English: <select name="english" id="">
+      <option value="">--Please choose an option--</option>
+      <option value="in-stock">True</option>
+      <option value="out-of-stock">False</option>
+    </select>
+    </div>
+   <input type="submit" value="Submit">  
+
+</form>

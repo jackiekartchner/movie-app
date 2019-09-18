@@ -1,10 +1,10 @@
 class Api::MoviesController < ApplicationController
 
-before_action :authenticate_admin, except: [:index, :show]
+  before_action :authenticate_admin, except: [:index, :show]
 
   def show
     @movie = Movie.find(params[:id])
-    render 'show.json.jb' 
+    render 'show.html.erb' 
   end
 
   def index
