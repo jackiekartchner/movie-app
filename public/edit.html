@@ -1,0 +1,32 @@
+<h1>Edit Actor</h1>
+
+<form action="/actors/<%= @actor.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+  <div>
+    First Name:
+    <input type="string" name="first_name" />
+  </div>
+  <div>
+    Last Name:
+    <input type="string" name="last_name" />
+  </div>
+  <div>
+    Known For:
+    <input type="string" name="known_For" />
+  </div>
+  <div>
+    Age:
+    <input type="integer" name="age" />
+  </div>
+  <div>
+    Gender:
+    <select name="gender" id="">
+      <option value="">--Please choose an option--</option>
+      <option value="male">male</option>
+      <option value="female">female</option>
+    </select>
+  </div>
+  <input type="submit" value="Edit Actor" />
+</form>
+
+<a href="/actors/<%= @actor.id %>" data-method="delete">Delete Actor</a>
